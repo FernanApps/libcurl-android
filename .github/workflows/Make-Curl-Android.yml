@@ -17,7 +17,7 @@ jobs:
     - uses: nttld/setup-ndk@v1
       id: setup-ndk
       with:
-       ndk-version: r21e
+       ndk-version: r22b
        add-to-path: false
        
     - name: Checking Files
@@ -35,6 +35,7 @@ jobs:
        
     - name: Building
       run: |
+        echo "${{ steps.setup-ndk.outputs.ndk-path }}"
         export NDK_ROOT=${{ steps.setup-ndk.outputs.ndk-path }}
         chmod 755 build_for_android.sh
         ./build_for_android.sh
