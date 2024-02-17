@@ -1,4 +1,4 @@
-# cURL for Android
+# cURL for Android.
 
 Compile curl, openssl, zlib with Android NDK.
 
